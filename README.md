@@ -17,10 +17,10 @@ Para este desafio, iremos utilizar a API do Yahoo Finance https://finance.yahoo
 
 ## [Web](https://github.com/guideti/variacao-ativo#web)
 
-1. Consultar o preço do ativo na API do Yahoo Finance (este é um exemplo da consulta do ativo PETR4 https://query2.finance.yahoo.com/v8/finance/chart/PETR4.SA)
-2. Implementar uma página em Angular que apresente o valor do ativo nos últimos 30 pregões e mostre a variação do preço no período. Você deverá considerar o valor de abertura (_chart.result.indicators.quote.open_)
-3. Inclua um gráfico apresentando o resultado da variação.
-4. Disponibilizar seu código aqui no Github
+1. Consultar o preço do ativo na API do Yahoo Finance (este é um exemplo da consulta do ativo PETR4 https://query2.finance.yahoo.com/v8/finance/chart/PETR4.SA) ✅
+2. Implementar uma página em Angular que apresente o valor do ativo nos últimos 30 pregões e mostre a variação do preço no período. Você deverá considerar o valor de abertura (_chart.result.indicators.quote.open_) ✅
+3. Inclua um gráfico apresentando o resultado da variação. (Não concluído)
+4. Disponibilizar seu código aqui no Github ✅
 
 ## [Sobre a avaliação](https://github.com/guideti/variacao-ativo#sobre-a-avalia%C3%A7%C3%A3o)
 
