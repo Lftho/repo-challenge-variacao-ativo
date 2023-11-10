@@ -4,14 +4,19 @@ import { RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: '/variation/PETR4.SA',
+    redirectTo: '/search',
     pathMatch: 'full'
   },
   {
-    path: 'variation/:symbol',
+    path: 'search',
+    loadChildren: () => import('./core/variation/search/search.module')
+      .then(m => m.SearchModule)
+  },
+  {
+    path: 'chart/:symbol',
     loadChildren: () => import('./core/variation/variation.module')
       .then(m => m.VariationModule)
-  }
+  },
 ];
 
 @NgModule({
