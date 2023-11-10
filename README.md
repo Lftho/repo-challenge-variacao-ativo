@@ -1,27 +1,36 @@
-# RepoChallengeVariacaoAtivo
+# Desafio Guide Investimento
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.18.
+# [Variação do Ativo](https://github.com/guideti/variacao-ativo#varia%C3%A7%C3%A3o-do-ativo)
 
-## Development server
+**(Leia até o final)**
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Este desafio consiste em consultar a variação do preço de um ativo a sua escolha nos últimos 30 pregões. Você deverá apresentar o percentual de variação de preço de um dia para o outro e o percentual desde o primeiro pregão apresentado.
 
-## Code scaffolding
+| Dia | Data | Valor | Variação em relaçào a D-1 | Variação em relação a primeira data |
+| --- | --- | --- | --- | --- |
+| 2 | 01/01/2021 | R$ 1,00 | - | - |
+| 3 | 02/01/2021 | R$ 1,10 | 10% | 10% |
+| 4 | 03/01/2021 | R$ 1,05 | -4,54% | 5% |
+| 5 | 04/01/2021 | R$ 1,90 | 80,95% | 90% |
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Para este desafio, iremos utilizar a API do Yahoo Finance https://finance.yahoo.com/
 
-## Running unit tests
+## [Web](https://github.com/guideti/variacao-ativo#web)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+1. Consultar o preço do ativo na API do Yahoo Finance (este é um exemplo da consulta do ativo PETR4 https://query2.finance.yahoo.com/v8/finance/chart/PETR4.SA)
+2. Implementar uma página em Angular que apresente o valor do ativo nos últimos 30 pregões e mostre a variação do preço no período. Você deverá considerar o valor de abertura (*chart.result.indicators.quote.open*)
+3. Inclua um gráfico apresentando o resultado da variação.
+4. Disponibilizar seu código aqui no Github
 
-## Running end-to-end tests
+## [Sobre a avaliação](https://github.com/guideti/variacao-ativo#sobre-a-avalia%C3%A7%C3%A3o)
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+‼️ ‼️ Utilize os recursos disponíveis na linguagem que você está se candidatando:
 
-## Further help
+- Padrões de projetos
+- Arquiteturas
+- Testes unitários
+- Configuração de deploy
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Seja criativo. Esperamos proatividade no desenvolvimento da solução. Tudo isso será levado em consideração na avaliação da sua prova, assim como a disponibilização do seu código fonte e o tempo necessário para a realização da prova.
