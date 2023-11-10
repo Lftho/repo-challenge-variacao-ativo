@@ -36,7 +36,7 @@
       [matAutocomplete]="auto"
     />
     <!-- componente de loading aqui -->
-    <mat-autocomplete #auto="matAutocomplete" (optionSelected)="handleSelect($event)">
+    <mat-autocomplete #auto="matAutocomplete" (optionSelected)="handleOption($event)">
       <mat-option *ngFor="let option of options" [value]="option">
         {{ option }}
       </mat-option>
@@ -44,3 +44,6 @@
   </mat-form-field>
 
 </form>
+
+
+<app-table></app-table>

@@ -2,8 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { VariationService } from '../../../shared/services/variation.service';
 import { MatAutocompleteSelectedEvent } from '@angular/material/autocomplete';
 import { FormBuilder, FormGroup } from '@angular/forms';
-import { timer } from 'rxjs';
-import { debounceTime, takeUntil } from 'rxjs/operators';
+import { debounceTime } from 'rxjs/operators';
+import { Router } from '@angular/router';
+import { Quotes, Result } from 'src/app/shared/interface/model';
 
 @Component({
   selector: 'app-variation',
@@ -12,16 +13,18 @@ import { debounceTime, takeUntil } from 'rxjs/operators';
 })
 export class VariationComponent implements OnInit {
   formGroup!: FormGroup;
-  options: string[] = [];
+  options: unknown[] = [];
   isLoading = false;
   private debounceTimeMs = 300; // Set the debounce time (in milliseconds)
 
   constructor(
     private fb: FormBuilder,
-    private variationService: VariationService
+    private variationService: VariationService,
+    private router: Router,
   ) { }
 
   ngOnInit(): void {
+    //verificando se o serviço está retornando
     this.variationService.dataVariation().subscribe((x: any) => {
       console.log(x)
     });
@@ -38,12 +41,18 @@ export class VariationComponent implements OnInit {
 
   async search(active: string) {
     if (active) {
-      let data = this.variationService.search(active);
-      console.log(data);
+      this.variationService
+        .search(active)
+        .subscribe((x: Result | any) => {
+          x.quotes?.map((x: Quotes) => {
+            this.options.push(x.symbol)
+          });
+        });
+      console.log('search', this.options);
     }
   }
 
-  handleSelect(event: any) {
-
+  handleOption(event: MatAutocompleteSelectedEvent) {
+    console.log('event', event)
   }
 }

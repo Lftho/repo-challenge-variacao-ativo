@@ -10,6 +10,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatTableModule } from '@angular/material/table';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { TableModule } from 'src/app/shared/ui/table/table.module';
 
 @NgModule({
   declarations: [VariationComponent],
@@ -21,6 +22,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     MatInputModule,
     MatProgressSpinnerModule,
     MatTableModule,
+    ReactiveFormsModule,
+    TableModule
   ]
 })
 export class VariationModule { }

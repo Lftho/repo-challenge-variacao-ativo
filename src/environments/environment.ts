@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  urlAPI: '/api'
+  urlAPI: '/api',
+  urlSearch: '/search'
 };
 
 /*

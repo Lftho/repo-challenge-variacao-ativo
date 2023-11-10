@@ -7,13 +7,26 @@ export interface IVariationResultChart {
   result: IVariationResult[];
 }
 
-
 export interface IVariationResult {
-  indicators: {
-    quote: []
-  };
+  indicators?: Result;
   meta: any;
   timestamp: []
+}
+
+export interface Result {
+  quotes: Quotes[]
+}
+
+export interface Quotes {
+  exchDisp: string;
+  exchange: string;
+  index: string;
+  isYahooFinance: boolean;
+  quoteType: string;
+  score: number;
+  shortname: string;
+  symbol?: string;
+  typeDisp: string;
 }
 
 export interface VariationData {
