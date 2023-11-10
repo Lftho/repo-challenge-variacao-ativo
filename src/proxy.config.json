@@ -16,5 +16,14 @@
       "^/api": ""
     },
     "changeOrigin": true
+  },
+  "/search": {
+    "target": "https://query2.finance.yahoo.com/v1/finance/",
+    "secure": false,
+    "logLevel": "debug",
+    "pathRewrite": {
+      "^/api": ""
+    },
+    "changeOrigin": true
   }
 }
