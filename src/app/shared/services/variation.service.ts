@@ -10,7 +10,7 @@ import { IVariationChart } from 'src/app/core/variation/interface/model';
   providedIn: 'root'
 })
 export class VariationService {
-  private urlAPI = environment.urlAPI + "PETR4.SA";
+  private urlAPI = environment.urlAPI;
 
   constructor(private stateBaseService: StateBaseService) {
     this.dataVariation();
@@ -18,5 +18,9 @@ export class VariationService {
 
   dataVariation() {
     return this.stateBaseService.get(this.urlAPI);
+  }
+
+  search(id: string) {
+    return this.stateBaseService.getId(id);
   }
 }

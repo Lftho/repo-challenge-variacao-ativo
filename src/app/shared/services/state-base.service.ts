@@ -10,7 +10,7 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root'
 })
 export class StateBaseService {
-  private urlAPI = environment.urlAPI + "PETR4.SA";
+  private urlAPI = environment.urlAPI;
 
   constructor(private http: HttpClient) { }
 
@@ -18,7 +18,7 @@ export class StateBaseService {
     return this.http.get<IVariationChart>(`${url}`);
   }
 
-  // protected post(url: string, body: any) {
-  //   return this.http.post(`${this.urlAPI}${url}`, body);
-  // }
+  getId(id: string) {
+    return this.http.get(`${this.urlAPI}/${id}`);
+  }
 }

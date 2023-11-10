@@ -24,3 +24,23 @@
 
 
 <h1>variação de ativos</h1>
+
+<form [formGroup]="formGroup">
+  <mat-form-field>
+    <mat-label>Pesquisa ativo</mat-label>
+    <input
+      formControlName="search"
+      type="text"
+      placeholder="Digite o nome do ativo, por exemplo: PETR4"
+      matInput
+      [matAutocomplete]="auto"
+    />
+    <!-- componente de loading aqui -->
+    <mat-autocomplete #auto="matAutocomplete" (optionSelected)="handleSelect($event)">
+      <mat-option *ngFor="let option of options" [value]="option">
+        {{ option }}
+      </mat-option>
+    </mat-autocomplete>
+  </mat-form-field>
+
+</form>
