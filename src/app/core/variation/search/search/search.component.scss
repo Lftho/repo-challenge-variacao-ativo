@@ -1,0 +1,15 @@
+.forms {
+  display: flex;
+  .search-form {
+    align-items: center;
+    justify-content: center;
+    margin: 10rem;
+
+    form {
+      .search-active {
+        width: 100%;
+        max-width: 500px;
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+<div class="forms">
+  <div class="search-form">
+  <h1>Faça sua busca por ativo</h1>
+  <form [formGroup]="formGroup">
+    <mat-form-field class="search-active">
+      <mat-label class="search-label">Pesquisa ativo</mat-label>
+      <input
+        class="search-input"
+        formControlName="search"
+        type="text"
+        placeholder="Digite por exemplo: PETR4"
+        matInput
+        [matAutocomplete]="auto"
+      />
+      <!-- componente de loading aqui -->
+      <mat-autocomplete #auto="matAutocomplete" (optionSelected)="handleOption($event)">
+        <mat-option *ngFor="let option of options" [value]="option">
+          {{ option }}
+        </mat-option>
+      </mat-autocomplete>
+    </mat-form-field>
+  </form>
+  
+</div>
+</div>
