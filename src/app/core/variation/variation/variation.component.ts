@@ -15,6 +15,8 @@ export class VariationComponent implements OnInit {
   formGroup!: FormGroup;
   options: unknown[] = [];
   isLoading = false;
+  show = false;
+
   private debounceTimeMs = 300; // Set the debounce time (in milliseconds)
 
   constructor(
@@ -53,6 +55,6 @@ export class VariationComponent implements OnInit {
   }
 
   handleOption(event: MatAutocompleteSelectedEvent) {
-    console.log('event', event)
+    this.router.navigateByUrl(`/chart/${event.option.value}`);
   }
 }
